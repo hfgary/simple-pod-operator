@@ -53,7 +53,11 @@ func (r *PodReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.R
 		return ctrl.Result{}, client.IgnoreNotFound(err)
 	}
 
-	l.Info("Logged Pod", "Logged Name", pod.Name, "Logged Namespace", pod.Namespace)
+	if pod.Namespace == "kube-system" {
+		return ctrl.Result{}, nil
+	}
+
+	l.Info("Logged Pod", "Name", pod.Name, "Namespace", pod.Namespace)
 
 	return ctrl.Result{}, nil
 }
