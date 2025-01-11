@@ -4,6 +4,16 @@
 
 ```
 kubebuilder init --domain test.hfgary.io --owner hfgary --repo github.com/hfgary/simple-pod-operator.git
+
+kubebuilder create api --group core --version v1 --kind Pod # create resource no, create controller yes
+```
+
+### kind
+
+```
+kind create cluster
+
+kind delete cluster
 ```
 
 ### devbox
