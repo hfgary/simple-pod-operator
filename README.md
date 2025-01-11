@@ -6,6 +6,8 @@
 kubebuilder init --domain test.hfgary.io --owner hfgary --repo github.com/hfgary/simple-pod-operator.git
 
 kubebuilder create api --group core --version v1 --kind Pod # create resource no, create controller yes
+
+go run cmd/main.go
 ```
 
 ### kind
@@ -37,6 +39,12 @@ devbox add kubebuilder@4.3.1
 devbox shell
 
 refresh
+```
+
+### Test
+
+```
+kubectl run test --rm -it --image=nginx -- /bin/bash
 ```
 
 ### Reference
