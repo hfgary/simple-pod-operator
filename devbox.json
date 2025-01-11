@@ -4,7 +4,8 @@
     "go@1.23.4",
     "docker@27.4.1",
     "kind@0.26.0",
-    "kubectl@1.32.0"
+    "kubectl@1.32.0",
+    "kubebuilder@4.3.1"
   ],
   "shell": {
     "init_hook": [
