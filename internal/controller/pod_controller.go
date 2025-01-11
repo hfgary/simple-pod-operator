@@ -46,13 +46,14 @@ type PodReconciler struct {
 // For more details, check Reconcile and its Result here:
 // - https://pkg.go.dev/sigs.k8s.io/controller-runtime@v0.19.1/pkg/reconcile
 func (r *PodReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
-	_ = log.FromContext(ctx)
+	l := log.FromContext(ctx)
 
-	// TODO(user): your logic here
 	pod := &corev1.Pod{}
 	if err := r.Get(ctx, req.NamespacedName, pod); err != nil {
 		return ctrl.Result{}, client.IgnoreNotFound(err)
 	}
+
+	l.Info("Logged Pod", "Logged Name", pod.Name, "Logged Namespace", pod.Namespace)
 
 	return ctrl.Result{}, nil
 }
