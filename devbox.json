@@ -5,7 +5,8 @@
     "docker@27.4.1",
     "kind@0.26.0",
     "kubectl@1.32.0",
-    "kubebuilder@4.3.1"
+    "kubebuilder@4.3.1",
+    "clang@19.1.5"
   ],
   "shell": {
     "init_hook": [

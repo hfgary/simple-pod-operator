@@ -1,6 +1,54 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "clang@19.1.5": {
+      "last_modified": "2024-12-23T21:10:33Z",
+      "resolved": "github:NixOS/nixpkgs/de1864217bfa9b5845f465e771e0ecb48b30e02d#clang",
+      "source": "devbox-search",
+      "version": "19.1.5",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/wkadfwbhn9b4kdih88j7izzy20qw79bk-clang-wrapper-19.1.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/wkadfwbhn9b4kdih88j7izzy20qw79bk-clang-wrapper-19.1.5"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/axikx8yj4ha02kdq7zk3cyvzy9jxcl3d-clang-wrapper-19.1.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/axikx8yj4ha02kdq7zk3cyvzy9jxcl3d-clang-wrapper-19.1.5"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/p7ck87mq20ngn4rv8w52imx4c80qj801-clang-wrapper-19.1.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/p7ck87mq20ngn4rv8w52imx4c80qj801-clang-wrapper-19.1.5"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xl0vlc2wdchfbq8536zs19pj2r3xdmma-clang-wrapper-19.1.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/xl0vlc2wdchfbq8536zs19pj2r3xdmma-clang-wrapper-19.1.5"
+        }
+      }
+    },
     "docker@27.4.1": {
       "last_modified": "2025-01-05T01:56:15Z",
       "resolved": "github:NixOS/nixpkgs/bf689c40d035239a489de5997a4da5352434632e#docker",
