@@ -3,6 +3,11 @@
 ### devbox
 
 ```
+devbox version
+0.13.7
+```
+
+```
 devbox init
 
 devbox search go
@@ -20,4 +25,5 @@ refresh
 
 ### Reference
 
+- https://www.jetify.com/docs/devbox/installing_devbox/?install-method=macos
 - https://www.youtube.com/watch?v=_XUJ1HoinWA
