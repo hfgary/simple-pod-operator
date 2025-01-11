@@ -53,11 +53,20 @@ func (r *PodReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.R
 		return ctrl.Result{}, client.IgnoreNotFound(err)
 	}
 
-	if pod.Namespace == "kube-system" {
+	if pod.Namespace == "kube-system" || pod.Namespace == "local-path-storage" {
 		return ctrl.Result{}, nil
 	}
 
 	l.Info("Logged Pod", "Name", pod.Name, "Namespace", pod.Namespace)
+
+	pod.Annotations = map[string]string{
+		"test": "hello",
+	}
+	if err := r.Update(ctx, pod); err != nil {
+		l.Error(err, "Failed to update Pod", "Name", pod.Name, "Namespace", pod.Namespace)
+		return ctrl.Result{}, err
+	}
+	l.Info("Updated Pod", "Name", pod.Name, "Namespace", pod.Namespace)
 
 	return ctrl.Result{}, nil
 }
