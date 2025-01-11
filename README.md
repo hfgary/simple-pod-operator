@@ -1,5 +1,11 @@
 # simple-pod-operator
 
+### kubebuilder
+
+```
+kubebuilder init --domain test.hfgary.io --owner hfgary --repo github.com/hfgary/simple-pod-operator.git
+```
+
 ### devbox
 
 ```
