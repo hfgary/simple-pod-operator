@@ -12,5 +12,7 @@ devbox add docker@27.4.1
 devbox add kind@0.26.0
 devbox add kubectl@1.32.0
 
+devbox shell
+
 refresh
 ```
